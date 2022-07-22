@@ -9,20 +9,14 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import org.springframework.test.web.reactive.server.WebTestClient.ResponseSpec;
-import org.springframework.util.Base64Utils;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import com.springbootcrudexample1.model.ProductDto;
 import com.springbootcrudexample1.service.ProductService;
@@ -41,7 +35,7 @@ import reactor.core.publisher.Mono;
 @ExtendWith(MockitoExtension.class)
 @RunWith(SpringRunner.class)
 @WebFluxTest(controllers = ProductController.class)
-public class ProductControllerUnitTest {
+public class ProductControllerTest {
 	// Mock the ProductService class by creating an instance of it and inject the
 	// instance into the application context.
 	// The Mocked instance can then be used to test the methods, the REST end-points
@@ -54,12 +48,12 @@ public class ProductControllerUnitTest {
 
 	@MockBean
 	private ProductService productService;
-
+	
 	// Create and instance, bean, of the WebTestClient class and inject it into the
 	// application context.
 	@Autowired
 	private WebTestClient webTestClient;
-
+	
 	/**
 	 * This unit test case "test_end_point_get_all_products" tests the
 	 * retrieval of all products in the database.

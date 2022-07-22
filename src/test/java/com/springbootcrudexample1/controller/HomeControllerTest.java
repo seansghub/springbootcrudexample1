@@ -26,7 +26,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @ExtendWith(MockitoExtension.class)
 @RunWith(SpringRunner.class)
 @WebFluxTest(controllers = HomeController.class)
-public class HomeControllerUnitTest {
+public class HomeControllerTest {
 	// Mock the ProductService class by creating an instance of it and inject the
 	// instance into the application context.
 	// The Mocked instance can then be used to test the methods, the REST end-points

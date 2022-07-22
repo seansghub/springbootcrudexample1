@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author seanea
  *
  */
-public class ProductUnitTest {	
+public class ProductTest {	
 	private Product product = new Product();
 	
 	/**

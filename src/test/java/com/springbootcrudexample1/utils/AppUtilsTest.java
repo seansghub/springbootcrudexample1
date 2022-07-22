@@ -15,7 +15,7 @@ import com.springbootcrudexample1.model.ProductDto;
  * @author seanea
  *
  */
-public class AppUtilsUnitTest {
+public class AppUtilsTest {
 	
 	/**
 	 * This unit-test case, test_conversion_of_entity_to_dto, tests

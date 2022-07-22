@@ -23,7 +23,7 @@ import reactor.core.publisher.Mono;
  *
  */
 @ExtendWith(MockitoExtension.class)
-public class ProductServiceUnitTest {
+public class ProductServiceTest {
 	@Mock
 	private IProductRepository productRepository;
 
@@ -32,7 +32,7 @@ public class ProductServiceUnitTest {
 	
 	private ProductDto productDto;
 	
-	ProductServiceUnitTest() {
+	ProductServiceTest() {
 		productDto = new ProductDto();
 		productDto.setId("id00");
 		productDto.setProductNum("productNum00");
